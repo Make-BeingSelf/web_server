@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    {{!-- <script src="/js/app.js"></script> 값을 받기 전에 실행됨--}}
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Use this site to get your weather!</p>
+        <form>
+            <input placeholder="Location">
+            <button>search</button>
+        </form>
+        <p id='message_location'></p>
+        <p id='message_weather'></p>
+    </div>
+
+    {{>footer}}
+    <script src="/js/app.js"></script> {{!--요소가 모두 표시된 후 실행됨--}}
+</body>
+
+</html>
