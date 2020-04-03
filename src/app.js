@@ -80,17 +80,16 @@ app.get("/help/*", (req, res) => {
 });
 
 //*: 명시하지 않은 모든 페이지 else같은 느낌
-app.get('*', (req, res) => {
+app.get("*", (req, res) => {
+  res.render("error", {
+    title: "404 page",
+    name: "Kim",
+    errorMessage: "Page not Found.",
+  });
+});
 
-    res.render('error', {
-        title: '404 page',
-        name: 'Kim',
-        errorMessage: 'Page not Found.'
-    })
-})
-
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
-    console.log(__dirname)
-    console.log(publicDirectoryPath)
-})
+app.listen(port, () => {
+  console.log("Server is up on port 3000.");
+  console.log(__dirname);
+  console.log(publicDirectoryPath);
+});
